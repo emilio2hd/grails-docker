@@ -20,8 +20,7 @@ WORKDIR /app
 
 EXPOSE 8080
 
-#Yeah, you need to run them using "bash -lc" to load sdkman's config and load the default grails and gradle
-RUN bash -lc "grails clean"
-RUN bash -lc "grails compile"
-RUN bash -lc "gradle run"
+RUN grails clean
+RUN grails compile
+RUN gradle run
 ```
